@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Velvet Brew – A cozy café offering slow coffee, soft moments, handcrafted beverages and artisan desserts in a warm, minimal setting."/>
+  <title>Velvet Brew – Slow Coffee. Soft Moments.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Velvet Brew</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cart" id="cartBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button id="closeCart" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">Total: <span id="cartTotal">₹0</span></div>
+      <a href="https://wa.me/919999999999?text=Hi!%20I'd%20like%20to%20order%20from%20Velvet%20Brew" target="_blank" class="btn btn-primary btn-full">Order via WhatsApp</a>
+    </div>
+  </aside>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1800&q=80" alt="Aesthetic coffee close-up" class="hero-img" loading="eager"/>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content reveal">
+      <p class="hero-eyebrow">Est. 2019 · Artisan Coffee</p>
+      <h1 class="hero-title">Velvet Brew</h1>
+      <p class="hero-tagline">Slow coffee. Soft moments.</p>
+      <a href="#menu" class="btn btn-primary">View Menu</a>
+    </div>
+    <a href="#menu" class="hero-scroll" aria-label="Scroll down">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </section>
+
+  <!-- MENU -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What We Serve</p>
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">Crafted with love, served with warmth.</p>
+      </div>
+      <div class="menu-tabs reveal">
+        <button class="tab-btn active" data-category="coffee">Coffee</button>
+        <button class="tab-btn" data-category="desserts">Desserts</button>
+        <button class="tab-btn" data-category="snacks">Snacks</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+    <div class="container about-container">
+      <div class="about-image reveal">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80" alt="Cozy café interior" loading="lazy"/>
+        <div class="about-img-accent"></div>
+      </div>
+      <div class="about-content reveal">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title">A Corner for the Soul</h2>
+        <p>Velvet Brew was born from a simple belief — that a great cup of coffee deserves unhurried attention. We source single-origin beans, brew every cup by hand, and design every corner of our space to make you feel at home.</p>
+        <p>Whether you're journaling over a latte, catching up with an old friend, or simply watching the rain — this is your place.</p>
+        <div class="about-badges">
+          <div class="badge"><span>🌿</span> Ethically Sourced</div>
+          <div class="badge"><span>☕</span> Hand Brewed</div>
+          <div class="badge"><span>🤍</span> Made with Love</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Captured Moments</p>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="gallery-item tall"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=75" alt="Latte art" loading="lazy"/></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=600&q=75" alt="Coffee beans" loading="lazy"/></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=75" alt="Dessert plate" loading="lazy"/></div>
+        <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=900&q=75" alt="Café ambiance" loading="lazy"/></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600&q=75" alt="Cappuccino" loading="lazy"/></div>
+        <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519682577862-22b62b24cb12?w=600&q=75" alt="Croissant" loading="lazy"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What People Say</p>
+        <h2 class="section-title">Reviews</h2>
+      </div>
+      <div class="testimonials-slider reveal">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Velvet Brew is my absolute safe space. The oat milk latte here has ruined every other café for me. I come here every single weekend."</p>
+            <div class="reviewer"><img src="https://i.pravatar.cc/48?img=47" alt="Ananya"/><div><strong>Ananya S.</strong><span>Regular Since 2022</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"The aesthetic alone deserves five stars. But the cold brew? Chef's kiss. I've never felt more 'main character energy' than sitting here with my journal."</p>
+            <div class="reviewer"><img src="https://i.pravatar.cc/48?img=32" alt="Rohan"/><div><strong>Rohan M.</strong><span>Food Blogger</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>"Took my mom here for her birthday — she said it was the most beautiful café she'd ever seen. The rose latte and the chocolate tart were absolutely divine."</p>
+            <div class="reviewer"><img src="https://i.pravatar.cc/48?img=25" alt="Priya"/><div><strong>Priya K.</strong><span>First-time Visitor</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★☆</div>
+            <p>"Hands down the best work-from-café experience. Great Wi-Fi, quiet corners, stunning interiors — and the staff remembered my order on my second visit!"</p>
+            <div class="reviewer"><img src="https://i.pravatar.cc/48?img=12" alt="Arjun"/><div><strong>Arjun D.</strong><span>Freelancer</span></div></div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" id="prevBtn" aria-label="Previous">‹</button>
+          <div class="slider-dots" id="sliderDots"></div>
+          <button class="slider-btn" id="nextBtn" aria-label="Next">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact-section" id="contact">
+    <div class="container contact-container">
+      <div class="contact-info reveal">
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="section-title">Come Visit</h2>
+        <ul class="contact-list">
+          <li><span>📍</span><div><strong>Address</strong><p>12, Brew Lane, Koramangala<br/>Bengaluru, Karnataka – 560034</p></div></li>
+          <li><span>📞</span><div><strong>Phone</strong><p>+91 99999 99999</p></div></li>
+          <li><span>🕐</span><div><strong>Hours</strong><p>Mon–Fri: 8:00 AM – 10:00 PM<br/>Sat–Sun: 9:00 AM – 11:00 PM</p></div></li>
+        </ul>
+        <div class="contact-btns">
+          <a href="https://www.google.com/maps?q=Koramangala+Bengaluru" target="_blank" class="btn btn-primary">Get Directions</a>
+          <a href="https://wa.me/919999999999?text=Hi%20Velvet%20Brew!%20I%20have%20a%20question." target="_blank" class="btn btn-outline">Order via WhatsApp</a>
+        </div>
+      </div>
+      <div class="contact-map reveal">
+        <iframe title="Velvet Brew Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6076!2d77.6101!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1491de41b3ff%3A0x8e8d9d5df44a7f01!2sKoramangala%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1690000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">Velvet Brew</span>
+        <p>Slow coffee. Soft moments.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2025 Velvet Brew. Made with ☕ and love.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
